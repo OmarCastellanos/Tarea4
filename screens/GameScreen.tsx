@@ -15,7 +15,7 @@ const GameScreen =()=> {
     },[] );
 
 const generateCards =(): string [] => {
-    const cardImages = Array.from (Array(26).keys()).map(index => require('../assets/cards/${index + 1}.png'));
+    const cardImages = Array.from (Array(26).keys()).map(index => require(`../assets/cards/${index + 1}.png`));
     const duplicatedCardImage = [...cardImages, ...cardImages];
     return shuffle (duplicatedCardImage);
 };
